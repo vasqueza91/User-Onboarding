@@ -13,7 +13,7 @@ const initialFormValues = {
   name: '',
   email: '',
   password: '',
-  termsOfService: '',
+  termsOfService: false,
 }
 const initialFormErrors = {
   name: '',
@@ -48,7 +48,7 @@ function App() {
    
     axios.post('https://reqres.in/api/users', newUser)
       .then(res => {
-        setUsers([res.data, ...users])
+        setUsers([res.data.data, ...users])
       })
       .catch(err => {
         console.log(err)
@@ -80,7 +80,7 @@ function App() {
       name: formValues.name.trim(),
       email: formValues.email.trim(),
       password: formValues.password.trim(),
-      
+      term: formValues.termsOfService,
       
     }
    

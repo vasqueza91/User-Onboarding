@@ -30,10 +30,9 @@ export default function UserForm(props) {
 
         <div className='errors'>
      
-          <div>{errors.username}</div>
+          <div>{errors.name}</div>
           <div>{errors.email}</div>
-          <div>{errors.role}</div>
-          <div>{errors.civil}</div>
+          <div>{errors.password}</div>
         </div>
       </div>
 
